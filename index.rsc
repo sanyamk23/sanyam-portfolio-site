@@ -23,79 +23,143 @@ a:["$","div",null,{"className":"home","style":{"--mono":"'JetBrains Mono', 'JetB
 15:["$","span","3",{"children":[["$","span",null,{"className":"word","aria-hidden":"true","children":"to"}]," "]}]
 16:["$","span","4",{"children":[["$","span",null,{"className":"word","aria-hidden":"true","children":"end"}],null]}]
 17:["$","div",null,{"children":[["$","p",null,{"className":"lede","children":"This is the shape of a typical system I build: FastAPI and Django services on EKS with Helm, PostgreSQL and Redis behind them, Terraform and CI/CD shipping it, and Prometheus and Grafana watching it."}],["$","$L8",null,{"className":"ghost","href":"/solaris","data-scramble":true,"children":[["$","span",null,{"data-label":true,"children":"See my projects"}],["$","svg",null,{"width":16,"height":16,"viewBox":"0 0 18 18","fill":"none","stroke":"currentColor","strokeWidth":"1.8","aria-hidden":"true","children":["$","path",null,{"d":"M2 9h13M10 4l5 5-5 5"}]}]]}]]}]
-1e:T25bb,<svg class="plan" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" role="img" preserveAspectRatio="xMidYMid slice" aria-label="Architecture diagram of a production backend: a client calls an API gateway with JWT auth, which routes to FastAPI services, a Django monolith and a RAG agent running on an EKS cluster with Helm, backed by PostgreSQL on RDS, Redis and S3. A CI/CD pipeline deploys it with Terraform, and Prometheus and Grafana watch it.">
-<defs><pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#6cc4ff" fill-opacity="0.35"/></pattern></defs>
+1e:T4fbc,<svg class="plan" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" role="img" preserveAspectRatio="xMidYMid slice" aria-label="Architecture diagram of a production backend on AWS. Request path: a client calls an API gateway that checks JWT and roles, which routes to FastAPI services, a Django monolith and a RAG agent with Redis on an EKS cluster deployed with Helm, backed by PostgreSQL on RDS and S3. A CI/CD pipeline builds, pushes an image, runs Terraform and deploys with Helm, and Prometheus and Grafana watch the cluster.">
+<defs>
+<pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#6cc4ff" fill-opacity="0.35"/></pattern>
+<linearGradient id="pl-card" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2750"/><stop offset="1" stop-color="#0f1730"/></linearGradient>
+<linearGradient id="pl-eks" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6cc4ff" stop-opacity="0.13"/><stop offset="1" stop-color="#6cc4ff" stop-opacity="0.03"/></linearGradient>
+<pattern id="pl-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#aab4cc" stroke-opacity="0.07" stroke-width="1"/></pattern>
+<marker id="pl-a-b" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#6cc4ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="pl-a-g" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#7be0b0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="pl-a-y" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#ffcf70" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="pl-a-v" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#b69cff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="pl-a-m" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#aab4cc" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<style>.pl-flow{stroke-dasharray:7 7;animation:pl-d 1.1s linear infinite}@keyframes pl-d{to{stroke-dashoffset:-14}}@media (prefers-reduced-motion:reduce){.pl-flow{animation:none}}</style>
+</defs>
 <rect width="1440" height="900" fill="#0a1020"/>
-<rect x="330" y="120" width="790" height="76" fill="none" stroke="#e6eaf5" stroke-width="2" stroke-dasharray="6 5"/>
-<text x="350" y="112" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#6cc4ff" text-anchor="start">ci/cd</text>
-<rect x="340" y="136" width="160" height="44" fill="#141d3a" stroke="#e6eaf5" stroke-width="2.5"/>
-<text x="420.0" y="158.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#e6eaf5" text-anchor="middle">git push</text>
-<rect x="530" y="136" width="170" height="44" fill="#141d3a" stroke="#e6eaf5" stroke-width="2.5"/>
-<text x="615.0" y="158.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#e6eaf5" text-anchor="middle">build + test</text>
-<rect x="730" y="136" width="160" height="44" fill="#141d3a" stroke="#e6eaf5" stroke-width="2.5"/>
-<text x="810.0" y="158.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#e6eaf5" text-anchor="middle">terraform</text>
-<rect x="930" y="136" width="160" height="44" fill="#141d3a" stroke="#e6eaf5" stroke-width="2.5"/>
-<text x="1010.0" y="158.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#e6eaf5" text-anchor="middle">helm deploy</text>
-<line x1="500" y1="158" x2="530" y2="158" stroke="#e6eaf5" stroke-width="2.5"/>
-<path d="M519.2 163.2 L530 158 L519.2 152.8" fill="none" stroke="#e6eaf5" stroke-width="2.5"/>
-<line x1="700" y1="158" x2="730" y2="158" stroke="#e6eaf5" stroke-width="2.5"/>
-<path d="M719.2 163.2 L730 158 L719.2 152.8" fill="none" stroke="#e6eaf5" stroke-width="2.5"/>
-<line x1="900" y1="158" x2="930" y2="158" stroke="#e6eaf5" stroke-width="2.5"/>
-<path d="M919.2 163.2 L930 158 L919.2 152.8" fill="none" stroke="#e6eaf5" stroke-width="2.5"/>
-<line x1="1090" y1="158" x2="1090" y2="236" stroke="#e6eaf5" stroke-width="2.5"/>
-<path d="M1084.8 225.2 L1090 236 L1095.2 225.2" fill="none" stroke="#e6eaf5" stroke-width="2.5"/>
-<rect x="80" y="420" width="170" height="90" fill="#141d3a" stroke="#e6eaf5" stroke-width="2.5"/>
-<text x="165.0" y="461.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#e6eaf5" text-anchor="middle">client</text>
-<text x="165.0" y="481.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#aab4cc" text-anchor="middle">mobile / web</text>
-<line x1="250" y1="465" x2="330" y2="465" stroke="#e6eaf5" stroke-width="2.5"/>
-<path d="M319.2 470.2 L330 465 L319.2 459.8" fill="none" stroke="#e6eaf5" stroke-width="2.5"/>
-<rect x="330" y="420" width="190" height="90" fill="#141d3a" stroke="#e6eaf5" stroke-width="2.5"/>
-<rect x="330" y="420" width="190" height="10" fill="#6cc4ff" fill-opacity="0.25" stroke="#e6eaf5" stroke-width="2"/>
-<text x="425.0" y="461.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#e6eaf5" text-anchor="middle">api gateway</text>
-<text x="425.0" y="481.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#aab4cc" text-anchor="middle">JWT + RBAC</text>
-<line x1="520" y1="465" x2="640" y2="465" stroke="#e6eaf5" stroke-width="2.5"/>
-<path d="M629.2 470.2 L640 465 L629.2 459.8" fill="none" stroke="#e6eaf5" stroke-width="2.5"/>
-<rect x="600" y="250" width="520" height="380" fill="none" stroke="#e6eaf5" stroke-width="2" stroke-dasharray="6 5"/>
-<text x="620" y="242" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#6cc4ff" text-anchor="start">eks cluster / helm</text>
-<rect x="640" y="290" width="200" height="86" fill="#141d3a" stroke="#e6eaf5" stroke-width="2.5"/>
-<rect x="640" y="290" width="200" height="10" fill="#6cc4ff" fill-opacity="0.25" stroke="#e6eaf5" stroke-width="2"/>
-<text x="740.0" y="329.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#e6eaf5" text-anchor="middle">fastapi services</text>
-<text x="740.0" y="349.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#aab4cc" text-anchor="middle">async microservices</text>
-<rect x="880" y="290" width="200" height="86" fill="#141d3a" stroke="#e6eaf5" stroke-width="2.5"/>
-<text x="980.0" y="329.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#e6eaf5" text-anchor="middle">django monolith</text>
-<text x="980.0" y="349.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#aab4cc" text-anchor="middle">admin + core domain</text>
-<rect x="640" y="420" width="200" height="86" fill="#141d3a" stroke="#e6eaf5" stroke-width="2.5"/>
-<text x="740.0" y="459.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#e6eaf5" text-anchor="middle">rag agent</text>
-<text x="740.0" y="479.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#aab4cc" text-anchor="middle">google adk</text>
-<rect x="880" y="420" width="200" height="86" fill="#141d3a" stroke="#e6eaf5" stroke-width="2.5"/>
-<text x="980.0" y="459.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#e6eaf5" text-anchor="middle">redis</text>
-<text x="980.0" y="479.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#aab4cc" text-anchor="middle">cache + queues</text>
-<line x1="740" y1="376" x2="740" y2="420" stroke="#e6eaf5" stroke-width="2.5"/>
-<path d="M734.8 409.2 L740 420 L745.2 409.2" fill="none" stroke="#e6eaf5" stroke-width="2.5"/>
-<line x1="880" y1="333" x2="840" y2="333" stroke="#e6eaf5" stroke-width="2.5"/>
-<path d="M850.8 327.8 L840 333 L850.8 338.2" fill="none" stroke="#e6eaf5" stroke-width="2.5"/>
-<line x1="840" y1="463" x2="880" y2="463" stroke="#e6eaf5" stroke-width="2.5"/>
-<path d="M869.2 468.2 L880 463 L869.2 457.8" fill="none" stroke="#e6eaf5" stroke-width="2.5"/>
-<line x1="1120" y1="333" x2="1220" y2="333" stroke="#e6eaf5" stroke-width="2.5"/>
-<path d="M1209.2 338.2 L1220 333 L1209.2 327.8" fill="none" stroke="#e6eaf5" stroke-width="2.5"/>
-<line x1="1120" y1="463" x2="1220" y2="463" stroke="#e6eaf5" stroke-width="2.5"/>
-<path d="M1209.2 468.2 L1220 463 L1209.2 457.8" fill="none" stroke="#e6eaf5" stroke-width="2.5"/>
-<rect x="1220" y="290" width="170" height="86" fill="#141d3a" stroke="#e6eaf5" stroke-width="2.5"/>
-<text x="1305.0" y="329.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#e6eaf5" text-anchor="middle">postgresql</text>
-<text x="1305.0" y="349.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#aab4cc" text-anchor="middle">rds, indexed</text>
-<rect x="1220" y="420" width="170" height="86" fill="#141d3a" stroke="#e6eaf5" stroke-width="2.5"/>
-<text x="1305.0" y="459.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#e6eaf5" text-anchor="middle">s3</text>
-<text x="1305.0" y="479.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#aab4cc" text-anchor="middle">objects + backups</text>
-<rect x="600" y="700" width="520" height="86" fill="#141d3a" stroke="#e6eaf5" stroke-width="2.5"/>
-<text x="860" y="738" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#e6eaf5" text-anchor="middle">prometheus + grafana</text>
-<text x="860" y="764" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#aab4cc" text-anchor="middle">latency, errors, cluster health</text>
-<line x1="860" y1="630" x2="860" y2="700" stroke="#e6eaf5" stroke-width="2.5"/>
-<path d="M854.8 689.2 L860 700 L865.2 689.2" fill="none" stroke="#e6eaf5" stroke-width="2.5"/>
-<text x="1140" y="846" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#aab4cc" text-anchor="end">alerts on what users feel</text>
-<text x="14" y="27" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#6cc4ff" text-anchor="start" letter-spacing="3">SANYAMK23</text>
-<text x="14" y="70" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" fill="#e6eaf5" text-anchor="start" font-weight="600">Production backend on AWS</text>
-<text x="14" y="94" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#aab4cc" text-anchor="start">request path, not to scale</text>
-<text x="14" y="112" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#aab4cc" text-anchor="start">fastapi / postgres / eks / terraform</text>
+<rect width="1440" height="900" fill="url(#pl-grid)"/>
+<text x="40" y="44" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#6cc4ff" text-anchor="start" font-weight="600" letter-spacing="3">SANYAMKUMAT</text>
+<text x="40" y="76" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" fill="#e6eaf5" text-anchor="start" font-weight="700">Production backend on AWS</text>
+<text x="1400" y="44" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#aab4cc" text-anchor="end">request path, not to scale</text>
+<rect x="1271.4" y="62" width="10" height="10" rx="2" fill="#b69cff"/>
+<text x="1287.4" y="72" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#aab4cc" text-anchor="start">observability</text>
+<rect x="1202.6000000000001" y="62" width="10" height="10" rx="2" fill="#7be0b0"/>
+<text x="1218.6000000000001" y="72" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#aab4cc" text-anchor="start">data</text>
+<rect x="1109.2" y="62" width="10" height="10" rx="2" fill="#6cc4ff"/>
+<text x="1125.2" y="72" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#aab4cc" text-anchor="start">runtime</text>
+<rect x="1032.2" y="62" width="10" height="10" rx="2" fill="#ffcf70"/>
+<text x="1048.2" y="72" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#aab4cc" text-anchor="start">ci/cd</text>
+<rect x="240" y="100" width="1164" height="780" rx="12" fill="none" stroke="#aab4cc" stroke-opacity="0.55" stroke-width="1.6" stroke-dasharray="3 7"/>
+<text x="1384" y="126" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#aab4cc" text-anchor="end">aws cloud · vpc</text>
+<rect x="250" y="146" width="845" height="80" rx="12" fill="none" stroke="#ffcf70" stroke-opacity="0.55" stroke-width="1.6" stroke-dasharray="7 6"/>
+<text x="266" y="141" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#ffcf70" text-anchor="start">ci/cd</text>
+<rect x="259" y="164" width="100" height="46" rx="9" fill="url(#pl-card)" stroke="#ffcf70" stroke-opacity="0.9" stroke-width="1.6"/>
+<rect x="260" y="165" width="98" height="4" rx="2" fill="#ffcf70" fill-opacity="0.85"/>
+<text x="309.0" y="195.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" fill="#e6eaf5" text-anchor="middle" font-weight="600">git push</text>
+<rect x="387" y="164" width="140" height="46" rx="9" fill="url(#pl-card)" stroke="#ffcf70" stroke-opacity="0.9" stroke-width="1.6"/>
+<rect x="388" y="165" width="138" height="4" rx="2" fill="#ffcf70" fill-opacity="0.85"/>
+<text x="457.0" y="195.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" fill="#e6eaf5" text-anchor="middle" font-weight="600">build + test</text>
+<rect x="555" y="164" width="124" height="46" rx="9" fill="url(#pl-card)" stroke="#ffcf70" stroke-opacity="0.9" stroke-width="1.6"/>
+<rect x="556" y="165" width="122" height="4" rx="2" fill="#ffcf70" fill-opacity="0.85"/>
+<text x="617.0" y="195.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" fill="#e6eaf5" text-anchor="middle" font-weight="600">push image</text>
+<rect x="707" y="164" width="120" height="46" rx="9" fill="url(#pl-card)" stroke="#ffcf70" stroke-opacity="0.9" stroke-width="1.6"/>
+<rect x="708" y="165" width="118" height="4" rx="2" fill="#ffcf70" fill-opacity="0.85"/>
+<text x="767.0" y="195.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" fill="#e6eaf5" text-anchor="middle" font-weight="600">terraform</text>
+<rect x="855" y="164" width="120" height="46" rx="9" fill="url(#pl-card)" stroke="#ffcf70" stroke-opacity="0.9" stroke-width="1.6"/>
+<rect x="856" y="165" width="118" height="4" rx="2" fill="#ffcf70" fill-opacity="0.85"/>
+<text x="915.0" y="195.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" fill="#e6eaf5" text-anchor="middle" font-weight="600">helm deploy</text>
+<path d="M359 187H387" fill="none" stroke="#ffcf70" stroke-opacity="1" stroke-width="2" class="pl-flow" marker-end="url(#pl-a-y)"/>
+<path d="M527 187H555" fill="none" stroke="#ffcf70" stroke-opacity="1" stroke-width="2" class="pl-flow" marker-end="url(#pl-a-y)"/>
+<path d="M679 187H707" fill="none" stroke="#ffcf70" stroke-opacity="1" stroke-width="2" class="pl-flow" marker-end="url(#pl-a-y)"/>
+<path d="M827 187H855" fill="none" stroke="#ffcf70" stroke-opacity="1" stroke-width="2" class="pl-flow" marker-end="url(#pl-a-y)"/>
+<path d="M767 164V128H1308V270" fill="none" stroke="#ffcf70" stroke-opacity="1" stroke-width="1.8" stroke-dasharray="2 6" marker-end="url(#pl-a-y)"/>
+<text x="1040" y="121" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#ffcf70" text-anchor="middle">terraform provisions vpc, eks, rds, s3</text>
+<path d="M915 210V270" fill="none" stroke="#ffcf70" stroke-opacity="1" stroke-width="2.2" class="pl-flow" marker-end="url(#pl-a-y)"/>
+<text x="927" y="246" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#ffcf70" text-anchor="start">helm upgrade</text>
+<rect x="40" y="420" width="160" height="90" rx="9" fill="url(#pl-card)" stroke="#aab4cc" stroke-opacity="0.9" stroke-width="1.6"/>
+<rect x="41" y="421" width="158" height="4" rx="2" fill="#aab4cc" fill-opacity="0.85"/>
+<text x="120.0" y="467.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#e6eaf5" text-anchor="middle" font-weight="600">client</text>
+<text x="120.0" y="485.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#aab4cc" text-anchor="middle">web / mobile</text>
+<circle cx="40" cy="420" r="12" fill="#0a1020" stroke="#aab4cc" stroke-width="1.8"/>
+<text x="40" y="425" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#aab4cc" text-anchor="middle" font-weight="700">1</text>
+<text x="220" y="414" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#aab4cc" text-anchor="middle">https</text>
+<path d="M200 465H280" fill="none" stroke="#aab4cc" stroke-opacity="1" stroke-width="2.2" class="pl-flow" marker-end="url(#pl-a-m)"/>
+<rect x="280" y="420" width="190" height="90" rx="9" fill="url(#pl-card)" stroke="#6cc4ff" stroke-opacity="0.9" stroke-width="1.6"/>
+<rect x="281" y="421" width="188" height="4" rx="2" fill="#6cc4ff" fill-opacity="0.85"/>
+<text x="375.0" y="467.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#e6eaf5" text-anchor="middle" font-weight="600">api gateway</text>
+<text x="375.0" y="485.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#aab4cc" text-anchor="middle">jwt + rbac</text>
+<circle cx="280" cy="420" r="12" fill="#0a1020" stroke="#6cc4ff" stroke-width="1.8"/>
+<text x="280" y="425" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#6cc4ff" text-anchor="middle" font-weight="700">2</text>
+<path d="M470 465H625V368H680" fill="none" stroke="#6cc4ff" stroke-opacity="1" stroke-width="2.4" class="pl-flow" marker-end="url(#pl-a-b)"/>
+<rect x="650" y="270" width="530" height="400" rx="12" fill="url(#pl-eks)" stroke="#6cc4ff" stroke-opacity="0.7" stroke-width="1.8" stroke-dasharray="7 6"/>
+<text x="670" y="296" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#6cc4ff" text-anchor="start" font-weight="600">eks cluster · helm release</text>
+<rect x="680" y="320" width="220" height="96" rx="9" fill="url(#pl-card)" stroke="#6cc4ff" stroke-opacity="0.9" stroke-width="1.6"/>
+<rect x="681" y="321" width="218" height="4" rx="2" fill="#6cc4ff" fill-opacity="0.85"/>
+<text x="790.0" y="370.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#e6eaf5" text-anchor="middle" font-weight="600">fastapi services</text>
+<text x="790.0" y="388.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#aab4cc" text-anchor="middle">async microservices</text>
+<circle cx="680" cy="320" r="12" fill="#0a1020" stroke="#6cc4ff" stroke-width="1.8"/>
+<text x="680" y="325" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#6cc4ff" text-anchor="middle" font-weight="700">3</text>
+<rect x="846" y="334" width="10" height="10" rx="2" fill="#6cc4ff" fill-opacity="0.9"/>
+<rect x="862" y="334" width="10" height="10" rx="2" fill="#6cc4ff" fill-opacity="0.65"/>
+<rect x="878" y="334" width="10" height="10" rx="2" fill="#6cc4ff" fill-opacity="0.4"/>
+<rect x="930" y="320" width="220" height="96" rx="9" fill="url(#pl-card)" stroke="#6cc4ff" stroke-opacity="0.9" stroke-width="1.6"/>
+<rect x="931" y="321" width="218" height="4" rx="2" fill="#6cc4ff" fill-opacity="0.85"/>
+<text x="1040.0" y="370.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#e6eaf5" text-anchor="middle" font-weight="600">django monolith</text>
+<text x="1040.0" y="388.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#aab4cc" text-anchor="middle">admin + core domain</text>
+<rect x="680" y="470" width="220" height="96" rx="9" fill="url(#pl-card)" stroke="#6cc4ff" stroke-opacity="0.9" stroke-width="1.6"/>
+<rect x="681" y="471" width="218" height="4" rx="2" fill="#6cc4ff" fill-opacity="0.85"/>
+<text x="790.0" y="520.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#e6eaf5" text-anchor="middle" font-weight="600">rag agent</text>
+<text x="790.0" y="538.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#aab4cc" text-anchor="middle">google adk</text>
+<rect x="930" y="470" width="220" height="96" rx="9" fill="url(#pl-card)" stroke="#6cc4ff" stroke-opacity="0.9" stroke-width="1.6"/>
+<rect x="931" y="471" width="218" height="4" rx="2" fill="#6cc4ff" fill-opacity="0.85"/>
+<text x="1040.0" y="520.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#e6eaf5" text-anchor="middle" font-weight="600">redis</text>
+<text x="1040.0" y="538.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#aab4cc" text-anchor="middle">cache + queues</text>
+<path d="M930 368H904" fill="none" stroke="#6cc4ff" stroke-opacity="1" stroke-width="2" marker-end="url(#pl-a-b)"/>
+<path d="M790 416V470" fill="none" stroke="#6cc4ff" stroke-opacity="1" stroke-width="2" class="pl-flow" marker-end="url(#pl-a-b)"/>
+<path d="M900 518H930" fill="none" stroke="#6cc4ff" stroke-opacity="1" stroke-width="2" class="pl-flow" marker-end="url(#pl-a-b)"/>
+<rect x="680" y="600" width="470" height="44" rx="8" fill="none" stroke="#6cc4ff" stroke-opacity="0.35" stroke-dasharray="3 5"/>
+<text x="915" y="627" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#aab4cc" text-anchor="middle">staged rollout · tested rollback</text>
+<rect x="1220" y="270" width="176" height="400" rx="12" fill="none" stroke="#7be0b0" stroke-opacity="0.55" stroke-width="1.6" stroke-dasharray="7 6"/>
+<text x="1234" y="296" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#7be0b0" text-anchor="start">data layer</text>
+<rect x="1236" y="320" width="144" height="96" rx="9" fill="url(#pl-card)" stroke="#7be0b0" stroke-opacity="0.9" stroke-width="1.6"/>
+<rect x="1237" y="321" width="142" height="4" rx="2" fill="#7be0b0" fill-opacity="0.85"/>
+<text x="1308.0" y="370.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#e6eaf5" text-anchor="middle" font-weight="600">postgresql</text>
+<text x="1308.0" y="388.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#aab4cc" text-anchor="middle">rds, indexed</text>
+<circle cx="1236" cy="320" r="12" fill="#0a1020" stroke="#7be0b0" stroke-width="1.8"/>
+<text x="1236" y="325" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#7be0b0" text-anchor="middle" font-weight="700">4</text>
+<rect x="1236" y="470" width="144" height="96" rx="9" fill="url(#pl-card)" stroke="#7be0b0" stroke-opacity="0.9" stroke-width="1.6"/>
+<rect x="1237" y="471" width="142" height="4" rx="2" fill="#7be0b0" fill-opacity="0.85"/>
+<text x="1308.0" y="520.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#e6eaf5" text-anchor="middle" font-weight="600">s3</text>
+<text x="1308.0" y="538.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#aab4cc" text-anchor="middle">objects + backups</text>
+<path d="M1150 368H1236" fill="none" stroke="#7be0b0" stroke-opacity="1" stroke-width="2.2" class="pl-flow" marker-end="url(#pl-a-g)"/>
+<path d="M1150 518H1236" fill="none" stroke="#7be0b0" stroke-opacity="1" stroke-width="2.2" class="pl-flow" marker-end="url(#pl-a-g)"/>
+<rect x="650" y="730" width="530" height="80" rx="9" fill="url(#pl-card)" stroke="#b69cff" stroke-opacity="0.9" stroke-width="1.6"/>
+<rect x="651" y="731" width="528" height="4" rx="2" fill="#b69cff" fill-opacity="0.85"/>
+<text x="915.0" y="772.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#e6eaf5" text-anchor="middle" font-weight="600">prometheus + grafana</text>
+<text x="915.0" y="790.0" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#aab4cc" text-anchor="middle">latency, errors, cluster health</text>
+<circle cx="650" cy="730" r="12" fill="#0a1020" stroke="#b69cff" stroke-width="1.8"/>
+<text x="650" y="735" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#b69cff" text-anchor="middle" font-weight="700">5</text>
+<path d="M915 730V670" fill="none" stroke="#b69cff" stroke-opacity="1" stroke-width="2" class="pl-flow" marker-end="url(#pl-a-v)"/>
+<text x="927" y="703" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#b69cff" text-anchor="start">scrape /metrics</text>
+<polyline points="1050,790 1072,774 1092,782 1116,758 1138,768 1162,750" fill="none" stroke="#b69cff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1160" y="848" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#aab4cc" text-anchor="end">alerts on what users feel</text>
+<rect x="260" y="700" width="360" height="166" rx="12" fill="none" stroke="#aab4cc" stroke-opacity="0.55" stroke-width="1.6" stroke-dasharray="3 6"/>
+<text x="278" y="726" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#aab4cc" text-anchor="start">request path</text>
+<circle cx="286" cy="744" r="9" fill="none" stroke="#6cc4ff" stroke-width="1.5"/>
+<text x="286" y="748" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#6cc4ff" text-anchor="middle" font-weight="700">1</text>
+<text x="304" y="748" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#e6eaf5" text-anchor="start">client calls the api over https</text>
+<circle cx="286" cy="768" r="9" fill="none" stroke="#6cc4ff" stroke-width="1.5"/>
+<text x="286" y="772" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#6cc4ff" text-anchor="middle" font-weight="700">2</text>
+<text x="304" y="772" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#e6eaf5" text-anchor="start">gateway checks the jwt and role</text>
+<circle cx="286" cy="792" r="9" fill="none" stroke="#6cc4ff" stroke-width="1.5"/>
+<text x="286" y="796" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#6cc4ff" text-anchor="middle" font-weight="700">3</text>
+<text x="304" y="796" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#e6eaf5" text-anchor="start">fastapi service handles the call</text>
+<circle cx="286" cy="816" r="9" fill="none" stroke="#6cc4ff" stroke-width="1.5"/>
+<text x="286" y="820" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#6cc4ff" text-anchor="middle" font-weight="700">4</text>
+<text x="304" y="820" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#e6eaf5" text-anchor="start">reads and writes postgresql, redis, s3</text>
+<circle cx="286" cy="840" r="9" fill="none" stroke="#6cc4ff" stroke-width="1.5"/>
+<text x="286" y="844" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#6cc4ff" text-anchor="middle" font-weight="700">5</text>
+<text x="304" y="844" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#e6eaf5" text-anchor="start">prometheus scrapes, grafana alerts</text>
 </svg>
 18:["$","div",null,{"className":"plan-wrap","id":"plan","children":[["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$1e"}}],"$L1f"]}]
 19:["$","div",null,{"className":"sheet","children":[["$","canvas",null,{"className":"seam","data-seam":"#F5F2EA","aria-hidden":"true"}],["$","section",null,{"className":"pad ways-section","children":[["$","h2",null,{"className":"h2","data-decrypt":true,"aria-label":"Two ways to get it built","children":[["$","span","0",{"children":[["$","span",null,{"className":"word","aria-hidden":"true","children":"Two"}]," "]}],["$","span","1",{"children":[["$","span",null,{"className":"word","aria-hidden":"true","children":"ways"}]," "]}],["$","span","2",{"children":[["$","span",null,{"className":"word","aria-hidden":"true","children":"to"}]," "]}],["$","span","3",{"children":[["$","span",null,{"className":"word","aria-hidden":"true","children":"get"}]," "]}],["$","span","4",{"children":[["$","span",null,{"className":"word","aria-hidden":"true","children":"it"}]," "]}],["$","span","5",{"children":[["$","span",null,{"className":"word","aria-hidden":"true","children":"built"}],null]}]]}],["$","div",null,{"className":"ways","id":"ways","children":[["$","svg",null,{"className":"graph","aria-hidden":"true","children":[["$","path",null,{"id":"g-base-a","className":"g-base"}],["$","path",null,{"id":"g-base-b","className":"g-base"}],["$","path",null,{"id":"g-a","className":"g-line","pathLength":1}],["$","path",null,{"id":"g-b","className":"g-line","pathLength":1}]]}],["$","div",null,{"className":"way","id":"way-a","children":[["$","span",null,{"className":"branch","children":"for-you"}],["$","h3",null,{"children":"I build it for you"}],["$","p",null,{"children":"You bring the idea and I build the backend: APIs, database, auth, cloud deployment, CI/CD and monitoring, running in production and documented."}]]}],["$","div",null,{"className":"way","id":"way-b","children":[["$","span",null,{"className":"branch","children":"with-you"}],["$","h3",null,{"children":"We build it together"}],["$","p",null,{"children":"I work alongside your team on architecture, reviews and cloud setup, so you can keep running and changing it after we are done."}]]}],["$","div",null,{"className":"ships-wrap","children":[["$","p",null,{"className":"ships-title","id":"merge-at","children":"Either way, you get"}],["$","ol",null,{"className":"ships","id":"ships","children":[[["$","li","Production APIs with real auth",{"children":"Production APIs with real auth"}],["$","li","A database with sensible indexes",{"children":"A database with sensible indexes"}],["$","li","Containers on Kubernetes or ECS",{"children":"Containers on Kubernetes or ECS"}],["$","li","CI/CD and infrastructure as code",{"children":"CI/CD and infrastructure as code"}],["$","li","Dashboards and alerts that you can read",{"children":"Dashboards and alerts that you can read"}]],["$","li",null,{"className":"live","children":"live"}]]}]]}]]}]]}],["$","section",null,{"className":"pad questions","children":[["$","h2",null,{"className":"h2","data-decrypt":true,"aria-label":"Before you fill in the form","children":[["$","span","0",{"children":[["$","span",null,{"className":"word","aria-hidden":"true","children":"Before"}]," "]}],["$","span","1",{"children":[["$","span",null,{"className":"word","aria-hidden":"true","children":"you"}]," "]}],["$","span","2",{"children":[["$","span",null,{"className":"word","aria-hidden":"true","children":"fill"}]," "]}],["$","span","3",{"children":[["$","span",null,{"className":"word","aria-hidden":"true","children":"in"}]," "]}],["$","span","4",{"children":[["$","span",null,{"className":"word","aria-hidden":"true","children":"the"}]," "]}],["$","span","5",{"children":[["$","span",null,{"className":"word","aria-hidden":"true","children":"form"}],null]}]]}],["$","dl",null,{"children":[["$","div","Do I need to know how to code?",{"className":"q","data-rise":true,"children":[["$","dt",null,{"children":"Do I need to know how to code?"}],["$","dd",null,{"children":"No. If I am building it, you never touch the code. If we are building it together, I start from where you are and explain each decision."}]]}],["$","div","What does it cost?",{"className":"q","data-rise":true,"children":[["$","dt",null,{"children":"What does it cost?"}],["$","dd",null,{"children":"It depends on scope. The final number depends on how much the system has to do, and you know it before anything gets built."}]]}],["$","div","How long does it take?",{"className":"q","data-rise":true,"children":[["$","dt",null,{"children":"How long does it take?"}],["$","dd",null,{"children":"We set the timeline on the first call, along with the stack and the cost. You leave that call knowing exactly what gets built and when."}]]}],"$L20"]}]]}]]}]
