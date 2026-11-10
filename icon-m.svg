@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48"><rect width="48" height="48" rx="10" fill="#f5f2ea"/><path d="M33 15.5c-2-2-5-3-8.5-3-5 0-8.5 2.6-8.5 6.3 0 8.3 17 4.4 17 11.4 0 3.4-3.6 5.8-8.6 5.8-3.8 0-7-1.2-9.4-3.5" fill="none" stroke="#2b57c8" stroke-width="5" stroke-linecap="round"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Sanyam Kumat monogram">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6cc4ff"/><stop offset=".55" stop-color="#7a7cff"/><stop offset="1" stop-color="#b69cff"/></linearGradient>
+<linearGradient id="m" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7be0b0"/><stop offset="1" stop-color="#6cc4ff"/></linearGradient>
+</defs>
+<rect width="64" height="64" rx="16" fill="#0a1020"/>
+<rect x="1.5" y="1.5" width="61" height="61" rx="14.5" fill="none" stroke="url(#g)" stroke-width="2"/>
+<path d="M27 20.5c-2.2-2.6-5.2-3.6-8.4-3.6-4.2 0-7 2.2-7 5.4 0 3.4 2.8 4.6 7 5.6 4.4 1 7.6 2.3 7.6 6.2 0 3.3-3 5.6-7.6 5.6-3.4 0-6.4-1.2-8.6-3.8" transform="translate(2 3.5)" fill="none" stroke="url(#g)" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M38 17.5v29M38 33l12-15.5M42.5 31l9 15.5" fill="none" stroke="url(#m)" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
