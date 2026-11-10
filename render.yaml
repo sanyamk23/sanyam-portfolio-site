@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: sanyam-portfolio
+    name: sanyamkumat
     runtime: python
     plan: free
     buildCommand: "echo no build"
