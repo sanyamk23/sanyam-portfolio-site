@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sanyamkumat.onrender.com/sitemap.xml

@@ -35,7 +35,7 @@
 
     function palette(){
       try{
-        var items=[['Home','/','page'],['Projects','/solaris','page'],['The Vault','/vault','page'],['Tools','/tools','page'],['About','/about','page'],['Work with me','/consult','page'],
+        var items=[['Home','/','page'],['Projects','/solaris','page'],['The Vault','/vault','page'],['Tools','/tools','page'],['About','/about','page'],['Work with me','/consult','page'],['Contact','/contact','page'],
           ['Voice agents: latency and cost','/vault/voice-agent-latency-and-cost','article'],['Build a RAG agent','/vault/build-a-rag-agent-that-answers-from-your-data','article'],['Test an LLM feature','/vault/evaluate-an-llm-feature-before-you-ship','article'],['LLM features on FastAPI','/vault/ship-llm-features-on-a-fastapi-backend','article'],
           ['GitHub','https://github.com/sanyamk23','external'],['LinkedIn','https://www.linkedin.com/in/sanyamkumat/','external']];
         var o=document.createElement('div');o.id='fx-cmd';o.setAttribute('role','dialog');o.setAttribute('aria-label','Quick navigation');
@@ -112,3 +112,10 @@
     if(document.readyState==='complete')setTimeout(init,300);else addEventListener('load',function(){setTimeout(init,300)});
   }catch(e){}
 })();
+
+;(function(){try{
+  function addFooter(){var n=document.querySelector('.end-nav');if(!n||n.querySelector('a[href="/contact"]'))return;var a=n.querySelector('a[href="/consult"]');if(!a)return;var c=a.cloneNode(true);c.setAttribute('href','/contact');var s=c.querySelector('span');if(s)s.textContent='contact';else c.textContent='contact';c.setAttribute('aria-label','Contact');n.insertBefore(c,a)}
+  window.addEventListener('load',function(){setTimeout(addFooter,1200)});
+  document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.ct-copy');if(!b)return;var v=b.getAttribute('data-copy');var done=function(){var o=b.textContent;b.textContent='Copied';setTimeout(function(){b.textContent=o},1600)};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(v).then(done,function(){})}else{var i=document.createElement('input');i.value=v;document.body.appendChild(i);i.select();try{document.execCommand('copy');done()}catch(_){}i.remove()}})
+}catch(_){}})();
